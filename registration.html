@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <div>
+            <form method="post" action="login.html" id="registration_form">
+                <input type="text" name="name" id="name" placeholder="Name"><br>
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <input type="password" name="password" id="password" placeholder="Password"><br>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br>
+                <select name="city" id="city">
+                    <option hidden>Select City</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                </select><br>
+                <select name="state" id="state">
+                    <option hidden>Select State</option>
+                    <option value="gujrat">Gujrat</option>
+                    <option value="maharashtra">Maharashtra</option>
+                </select><br>
+                <input type="checkbox" name="terms" id="terms"> I accept terms and conditions.<br>
+                <input type="submit" value="Register" onclick=" return validate()">
+
+            </form>
+        </div>
+        <script src="registration.js"></script>
+    </body>
+</html>

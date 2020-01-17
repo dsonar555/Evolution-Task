@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="width: 300px; background-color: cornsilk;">
+            <p id="adminName"></p>
+            <a href = "dashboard.html"> Dashboard</a>
+            <a href= "users.html">Users</a>
+            <a href= "logout.html">Logout</a>
+        </div>
+        <div>
+            <form id="addUser" method="post">
+                <input type="text" name="name" id="name" placeholder="Name"><br>
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <input type="password" name="password" id="password" placeholder="Password"><br>
+                <input type="date" name="DOB" id="DOB" placeholder="Birthdate">
+                <br>
+                <input type="submit" value="Add User" onclick=" return addNewUser()"> 
+            </form>
+            <form id="editUser" method="post" style="display: none;">
+                <input type="hidden" name="updateId" id="updateId">
+                <input type="text" name="newName" id="newName" placeholder="Name"><br>
+                <input type="email" name="newEmail" id="newEmail" placeholder="Email"><br>
+                <input type="password" name="newPassword" id="newPassword" placeholder="Password"><br>
+                <input type="date" name="newDOB" id="newDOB" placeholder="Birthdate">
+                <br>
+                <input type="button" value="Update User" onclick=" return updateUser()">
+            </form>
+        </div>
+        <div>
+            <table id="user_data" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Birthdate</th>
+                        <th>Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <script src="users.js"></script>
+    </body>
+</html>
