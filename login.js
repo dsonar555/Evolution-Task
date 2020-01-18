@@ -1,3 +1,12 @@
+if(sessionStorage.getItem("loggedInSubUser")!= null ) 
+{
+    location.href="sub_user.html";
+}
+else if(sessionStorage.getItem("loggedInUserAsAdmin")!=null )
+{
+    location.href="dashboard.html";
+}
+
 if(sessionStorage.getItem('admin') != null )
 {
     document.getElementById('admin-regi').style.display= 'none';
@@ -32,8 +41,8 @@ function login()
     {
         if( email == adminData.adminEmail && password == adminData.adminPassword)
         {
+            sessionStorage.loggedInUserAsAdmin=adminData.adminEmail;
             window.location.href="dashboard.html";
-            sessionStorage.loggedInUser=adminData.adminEmail;
         }
         // else if( email == )
         else

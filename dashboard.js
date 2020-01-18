@@ -1,3 +1,10 @@
+
+if(sessionStorage.getItem("loggedInUserAsAdmin")==null )
+{ 
+    location.href="login.html";
+}
+
+
 adminData=JSON.parse(sessionStorage.admin);
 document.getElementById('adminName').innerHTML=" Welcome "+adminData.adminName;
 

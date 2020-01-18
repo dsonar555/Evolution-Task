@@ -1,8 +1,8 @@
-if(sessionStorage.getItem("")==null)
-{
-    document.getElementById('');
-}
 
+if(sessionStorage.getItem("loggedInUserAsAdmin")==null )
+{ 
+    location.href="login.html";
+}
 if(sessionStorage.getItem('subUsers')==null)
 {
     var allUsers=new Array();

@@ -1,3 +1,8 @@
+if(sessionStorage.getItem("loggedInSubUser")== null)
+{
+    location.href="login.html";
+}
+
 loggedUser=JSON.parse(sessionStorage.loggedInSubUser);
 document.getElementById('user').innerHTML="Welcome " + loggedUser.name;
 date=new Date(loggedUser.birthDate);
